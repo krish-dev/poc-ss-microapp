@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { mountRootParcel } from 'single-spa';
+declare var window:any
 
 @Component({
   selector: 'microapp-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'microapp';
+  // async configSystemJS() {
+  //   return window.System.import('http://localhost:4202/main.js');
+  // }
+  async configModuleFedeation() {
+    // @ts-ignore
+    return import('parcel');
+  }
+  mountRootParcel = mountRootParcel;
 }

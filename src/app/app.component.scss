@@ -1,0 +1,16 @@
+.microapp {
+    background-color: bisque;
+    padding: 20px;
+    height: 85vh;
+    
+    .flex-container {
+        display: flex;
+        .parcel-holder {
+            width: 340px;
+            height: 360px;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+        }
+    }
+}
